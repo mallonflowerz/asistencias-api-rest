@@ -23,6 +23,7 @@ Por defecto se crea un admin con lo siguiente:
 
 Debe logearse para poder crear más administradores, si desea puede eliminar el admin por defecto.
 
+
 Base endpoint por defecto: 
 ```url
 http/localhost:3004
