@@ -267,7 +267,7 @@ La forma de consumir esta peticion varia dependiendo del lenguaje o framework fr
 
 La primera y segunda key es obligatoria y deben escribirse exactamente como se indica en a imagen, en el **userId** debe indicar el id del usuario al cual desea subir su foto.
 
-Para configurar el peso de las foto puede irse al archivo **application.properties** y configurar lo siguiente:
+Para configurar el peso de las foto puede irse al archivo [application.properties](https://github](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties)) **application.properties** y configurar lo siguiente:
 ```properties
 # files config
 spring.servlet.multipart.max-file-size=5MB # indique el tamaño maximo que desee
