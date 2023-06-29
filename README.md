@@ -236,4 +236,8 @@ Ejemplo:
 
 POST:
 
-Guarda la foto del usuario indicado en los parametros
+Guarda la foto del usuario indicado en los parametros.
+
+La forma de consumir esta peticion varia dependiendo del lenguaje o framework front-end que quiera usar, pero casi todos tienen la misma logica y es la siguiente.
+
+![params](asset/param.png)
