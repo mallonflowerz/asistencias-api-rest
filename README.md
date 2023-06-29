@@ -214,6 +214,11 @@ Envia al correo del usuario indicado en la cabecera, un email con todos sus regi
 /asistencia/envmail/idUser
 ```
 
+Para poder usar el envio de correos electronicos debe configurar en el archivo **application.properties** lo siguiente:
+```properties
+
+```
+
 ## UPLOAD PHOTO (beta):
 
 Estos endpoints son para subir y ver la foto de cada usuario (Mas adelante se va a implementar los metodos PUT y DELETE).
