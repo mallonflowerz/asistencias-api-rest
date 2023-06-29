@@ -6,6 +6,8 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 - Debe tener Java JDK +17 instalado en su máquina.
 - Puede cambiar la configuración de puertos de ejecución y demás en el archivo **application.properties** (debe tener un editor de código instalado para usar el código fuente).
 ```properties
+server.port=3004 # Puede cambiar el puerto al que desee
+
 # configuracion de la bbdd MySQL
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 # puede cambiar el puerto "3306" al que use su equipo y el nombre de la BBDD "asistencias" al que desee (recuerde crear la BBDD antes de ejcutar la API)
