@@ -241,3 +241,10 @@ Guarda la foto del usuario indicado en los parametros.
 La forma de consumir esta peticion varia dependiendo del lenguaje o framework front-end que quiera usar, pero casi todos tienen la misma logica y es la siguiente.
 
 ![params](https://raw.githubusercontent.com/mallonflowerz/asistencias/main/asset/param.PNG)
+
+La primera y segunda key es obligatoria y deben escribirse exactamente como se indica en a imagen, en el userId debe indicar el id del usuario al cual desea subir su foto.
+
+Para configurar el peso de las foto puede irse al archivo application.properties y configurar lo siguiente:
+```properties
+
+```
