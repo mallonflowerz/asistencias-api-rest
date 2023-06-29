@@ -105,3 +105,19 @@ Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
     }
 ]
 ```
+
+POST:
+```url
+/usuarios
+```
+Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
+```json
+{
+    "primerNombre": "WILLIAN",
+    "segundoNombre": "JESE",
+    "primerApellido": "ASPRILLA",
+    "segundoApellido": "COOKIE",
+    "email": "correo1@gmail.com",
+    "numeroIdentificacion": "2205459632"
+}
+```
