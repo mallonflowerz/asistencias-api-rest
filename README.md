@@ -216,8 +216,17 @@ Envia al correo del usuario indicado en la cabecera, un email con todos sus regi
 
 Para poder usar el envio de correos electronicos debe configurar en el archivo **application.properties** lo siguiente:
 ```properties
-
+# configuracion para envios de emails
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=su_correo@gmail.com # indicar el correo con el cual quiere enviar todos los correos electronicos a los usuarios
+spring.mail.password=password # colocar la contraseña generada para la aplicacion, el nombre debe ser "asistencias"
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
 ```
+Si no sabe como generar una contraseña para la aplicacion puede mirar este video que lo explica: 
+
+https://www.youtube.com/watch?v=Q74nxFBCHCI&ab_channel=Consultor%C3%ADaINSICON
 
 ## UPLOAD PHOTO (beta):
 
