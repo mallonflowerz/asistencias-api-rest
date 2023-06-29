@@ -20,7 +20,6 @@ Por defecto se crea un admin con lo siguiente:
     "password": "@123456@"
 }
 ```
-
 Debe logearse para poder crear más administradores, si desea puede eliminar el admin por defecto.
 
 Base endpoint por defecto: 
@@ -35,6 +34,23 @@ GET:
 /register
 ``` 
 Funciona para obtener todos los administradores que hay registrados.
+Ejemplo de la respuesta:
+```json
+[
+    {
+        "username": "admin",
+        "password": "@123456@"
+    },
+    {
+        "username": "admin2",
+        "password": "@1234567@"
+    },
+    {
+        "username": "admin3",
+        "password": "@1234567@"
+    }
+]
+```
 
 POST:
 ```url
