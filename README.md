@@ -1,10 +1,10 @@
-## API asistencias 
+# API asistencias 
 
 ![portada](https://raw.githubusercontent.com/mallonflowerz/asistencias/main/asset/portada.png)
 
 Esta API está hecha con Spring Boot y se encarga de manejar las entradas y salidas de usuarios, almacenar esos datos en la base de datos y enviar correos al usuario sobre sus salidas y entradas.
 
-# Aspectos a tener en cuenta para ejecutar la API
+## Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
 - Debe crear una BBDD con el nombre de "asistencias" en su servidor.
 - Si desea usar el archivo JAR como opción, debe ejecutar el comando para iniciar la app en el CMD al mismo nivel del archivo "java -jar asistenciasAPI.jar".
