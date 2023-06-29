@@ -28,11 +28,12 @@ http/localhost:3004
 ### Endpoints
 
 GET: 
+
+Funciona para obtener todos los administradores que hay registrados.
 ```url
 /register
 ``` 
-Funciona para obtener todos los administradores que hay registrados.
-Ejemplo de la respuesta:
+Ejemplo:
 ```json
 [
     {
@@ -51,10 +52,11 @@ Ejemplo de la respuesta:
 ```
 
 POST:
+
+Es para registrar un nuevo administrador desde el body.
 ```url
 /register
 ``` 
-Es para registrar un nuevo administrador desde el body:
 ```json
 {
     "username": "String",
@@ -63,26 +65,30 @@ Es para registrar un nuevo administrador desde el body:
 ```
 
 PUT:
+
+Actualiza el admin con el ID de la cabecera, debe ser enviada las nuevas credenciales en el body como en la petición POST.
 ```url
 /register/id
 ``` 
-Actualiza el admin con el ID de la cabecera, debe ser enviada las nuevas credenciales en el body como en la petición POST.
 
 DELETE:
+
+Elimina el admin con el ID dado en la cabecera.
 ```url
 /register/id
 ``` 
-Elimina el admin con el ID dado en la cabecera.
 
 ## USUARIO:
 
 Los siguientes endpoints sin para insertar, actualizar, eliminar y leer usuarios.
 
 GET:
+
+Obtiene todos los usuarios registrados en la BBDD.
 ```url
 /usuarios
 ```
-Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
+Ejemplo:
 ```json
 [
     {
@@ -108,10 +114,11 @@ Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
 
 POST:
 
-Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
+Guarda un usuario en la BBDD (todos los campos son requeridos).
 ```url
 /usuarios
 ```
+Ejemplo:
 ```json
 {
     "primerNombre": "WILLIAN",
@@ -124,6 +131,7 @@ Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
 ```
 
 GET:
+
 Obtiene un usuario por su ID
 ```url
 /usuarios/id
