@@ -4,9 +4,16 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 
 ## Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
-- Debe crear una BBDD con el nombre de "asistencias" en su servidor.
-- Si desea usar el archivo JAR como opción, debe ejecutar el comando para iniciar la app en el CMD al mismo nivel del archivo "java -jar asistenciasAPI.jar".
-- Puede cambiar la configuración de puertos de ejecución y demás en el archivo application.properties (debe tener un editor de código instalado para usar el código fuente).
+- Puede cambiar la configuración de puertos de ejecución y demás en el archivo **application.properties** (debe tener un editor de código instalado para usar el código fuente).
+```properties
+# configuracion de la bbdd MySQL
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# puede cambiar el puerto "3306" al que use su equipo y el nombre de la BBDD "asistencias" al que desee (recuerde crear la BBDD antes de ejcutar la API)
+spring.datasource.url=jdbc:mysql://localhost:3306/asistencias?useSSL=false&serverTimezone=America/Bogota&allowPublicKeyRetrieval=true
+spring.datasource.username=root # Modifique su username 
+spring.datasource.password=tu_password # Coloque su password
+spring.jpa.hibernate.ddl-auto=update 
+```
 
 ## CREDENCIALES:
 Estos Endpoints son para crear admins para que manejen las diferentes peticiones HTTPs de la app.
