@@ -81,7 +81,7 @@ Elimina el admin con el ID dado en la cabecera.
 
 ## USUARIO:
 
-Los siguientes endpoints sin para insertar, actualizar, eliminar y leer usuarios.
+Los siguientes endpoints sirven para insertar, actualizar, eliminar y leer usuarios.
 
 GET:
 
@@ -151,3 +151,43 @@ Elimina el usuario con el id indicado en la url.
 ```url
 /usuarios/id
 ``` 
+
+
+## MOVIMIENTOS:
+
+Los siguientes endpoints son para registrar las entradas y salidas de cada usuario.
+
+GET:
+Obtiene todos los movimientos.
+```url
+/asistencia
+```
+Ejemplo
+```json
+[
+    {
+        "usuarios": {
+            "primerNombre": "WILLIAN",
+            "segundoNombre": "JESE",
+            "primerApellido": "ASPRILLA",
+            "segundoApellido": "COOKIE",
+            "email": "correo1@gmail.com",
+            "numeroIdentificacion": "2205459632"
+        },
+        "fechaHora": "2023-06-21T21:05:08.039414",
+        "entrada": true
+    },
+    {
+        "usuarios": {
+            "primerNombre": "WILLIAN",
+            "segundoNombre": "JESE",
+            "primerApellido": "ASPRILLA",
+            "segundoApellido": "COOKIE",
+            "email": "correo1@gmail.com",
+            "numeroIdentificacion": "2205459632"
+        },
+        "fechaHora": "2023-06-21T21:03:57.215438",
+        "entrada": false
+    }
+]
+```
