@@ -102,16 +102,6 @@ Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
         "segundoApellido": "SUR",
         "email": "correo2@gmail.com",
         "numeroIdentificacion": "2569965238"
-    },
-    {
-        "id": 3,
-        "primerNombre": "D",
-        "segundoNombre": "J",
-        "primerApellido": "DE",
-        "segundoApellido": "JESUS",
-        "email": "correo3@gmail.com",
-        "numeroIdentificacion": "123456"
-    },
-    ...
+    }
 ]
 ```
