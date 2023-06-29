@@ -2,7 +2,7 @@
 
 ![portada](https://raw.githubusercontent.com/mallonflowerz/asistencias/main/asset/portada.png)
 
-Esta API está hecha con Spring Boot y se encarga de manejar las entradas y salidas de usuarios, almacenar esos datos en la base de datos, enviar correos al usuario sobre sus salidas y entradas.
+Esta API está hecha con Spring Boot y se encarga de manejar las entradas y salidas de usuarios, almacenar esos datos en la base de datos y enviar correos al usuario sobre sus salidas y entradas.
 
 # Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
@@ -14,6 +14,7 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 Estos Endpoints son para crear admins para que manejen las diferentes peticiones HTTPs de la app.
 Por defecto se crea un admin con lo siguiente:
 
+print("hola")
 username: "admin"
 password: "@123456@"
 
