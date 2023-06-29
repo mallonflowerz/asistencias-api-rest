@@ -107,6 +107,7 @@ Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
 ```
 
 POST:
+
 Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
 ```url
 /usuarios
