@@ -56,7 +56,7 @@ POST:
 ```url
 /register
 ``` 
-Es para registrar un nuevo administrador, debe ser enviado en el siguiente formato (clave: valor) desde el body:
+Es para registrar un nuevo administrador desde el body:
 ```json
 {
     "username": "String",
