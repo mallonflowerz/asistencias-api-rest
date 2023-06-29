@@ -213,3 +213,27 @@ Envia al correo del usuario indicado en la cabecera, un email con todos sus regi
 ```url
 /asistencia/envmail/idUser
 ```
+
+UPLOAD PHOTO (beta):
+
+Estos endpoints son para subir y ver la foto de cada usuario (Mas adelante se va a implementar los metodos PUT y DELETE).
+
+GET:
+
+Muestra la foto del usuario indicado.
+```url
+/files/idUser
+```
+Ejemplo:
+```json
+{
+    "id": 1,
+    "fileName": "willian_face.png",
+    "fileType": "image/png",
+    "fileData": "iVBORw0KGgoAAAA..."
+}
+```
+
+POST:
+
+Guarda la foto del usuario indicado en los parametros
