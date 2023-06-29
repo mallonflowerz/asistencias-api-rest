@@ -14,7 +14,11 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 Estos Endpoints son para crear admins para que manejen las diferentes peticiones HTTPs de la app.
 Por defecto se crea un admin con lo siguiente:
 
-print("hola")
+def saludar():
+    print("Hola, mundo")
+
+saludar()
+
 username: "admin"
 password: "@123456@"
 
