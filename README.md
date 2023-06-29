@@ -20,12 +20,13 @@ Por defecto se crea un admin con lo siguiente:
     "password": "@123456@"
 }
 ```
-username: "admin"
-password: "@123456@"
 
 Debe logearse para poder crear más administradores, si desea puede eliminar el admin por defecto.
 
-Base endpoint por defecto: http/localhost:3004
+Base endpoint por defecto: 
+```url
+http/localhost:3004
+```
 
 # Endpoints
 
