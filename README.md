@@ -107,10 +107,10 @@ Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
 ```
 
 POST:
+Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
 ```url
 /usuarios
 ```
-Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
 ```json
 {
     "primerNombre": "WILLIAN",
@@ -120,4 +120,15 @@ Guarda un usuario en la BBDD (todos los campos son requeridos). Ejemplo:
     "email": "correo1@gmail.com",
     "numeroIdentificacion": "2205459632"
 }
+```
+
+GET:
+Obtiene un usuario por su ID
+```url
+/usuarios/id
+```
+
+PUT:
+```url
+/usuarios
 ```
