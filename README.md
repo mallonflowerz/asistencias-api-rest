@@ -37,15 +37,21 @@ GET:
 Funciona para obtener todos los administradores que hay registrados.
 
 POST:
+```url
 /register
+``` 
 Es para registrar un nuevo administrador, debe ser enviado en el siguiente formato (clave: valor) desde el body:
 username : String
 password: String
 
 PUT:
-/register/(id)
+```url
+/register/{id}
+``` 
 Actualiza el admin con el ID de la cabecera, debe ser enviada las nuevas credenciales en el body como en la petición POST.
 
 DELETE:
-/register/(id)
+```url
+/register/{id}
+``` 
 Elimina el admin con el ID dado en la cabecera.
