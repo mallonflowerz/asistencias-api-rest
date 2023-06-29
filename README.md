@@ -27,7 +27,7 @@ http/localhost:3004
 
 ### Endpoints
 
-GET: 
+**GET**: 
 
 Funciona para obtener todos los administradores que hay registrados.
 ```url
@@ -51,7 +51,7 @@ Ejemplo:
 ]
 ```
 
-POST:
+**POST**:
 
 Es para registrar un nuevo administrador desde el body.
 ```url
@@ -65,14 +65,14 @@ Ejemplo:
 }
 ```
 
-PUT:
+**PUT**:
 
 Actualiza el admin con el ID de la cabecera, debe ser enviada las nuevas credenciales en el body como en la petición POST.
 ```url
 /register/id
 ``` 
 
-DELETE:
+**DELETE**:
 
 Elimina el admin con el ID dado en la cabecera.
 ```url
@@ -83,7 +83,7 @@ Elimina el admin con el ID dado en la cabecera.
 
 Los siguientes endpoints sirven para insertar, actualizar, eliminar y leer usuarios.
 
-GET:
+**GET**:
 
 Obtiene todos los usuarios registrados en la BBDD.
 ```url
@@ -113,14 +113,14 @@ Ejemplo:
 ]
 ```
 
-GET:
+**GET**:
 
 Obtiene un usuario por su ID
 ```url
 /usuarios/id
 ```
 
-POST:
+**POST**:
 
 Guarda un usuario en la BBDD (todos los campos son requeridos).
 ```url
@@ -138,14 +138,14 @@ Ejemplo:
 }
 ```
 
-PUT:
+**PUT**:
 
 Actualiza el usuario con el id indicado en la url (Debe mandar el usuario con el mismo formato de la peticion POST).
 ```url
 /usuarios/id
 ```
 
-DELETE:
+**DELETE**:
 
 Elimina el usuario con el id indicado en la url.
 ```url
@@ -157,7 +157,7 @@ Elimina el usuario con el id indicado en la url.
 
 Los siguientes endpoints son para registrar las entradas y salidas de cada usuario.
 
-GET:
+**GET**:
 
 Obtiene todos los movimientos.
 ```url
@@ -193,21 +193,21 @@ Ejemplo:
 ]
 ```
 
-GET:
+**GET**:
 
 Muestra los movimientos del usuario con el id indicado en la url.
 ```url
 /asistencia/id
 ```
 
-POST:
+**POST**:
 
 Registra una salida o entrada dependiendo de su ultimo registro en la BBDD, debe colocar el numero de identifiacion en la url.
 ```url
 /asistencia/numeroDeIdentificacion
 ```
 
-POST:
+**POST**:
 
 Envia al correo del usuario indicado en la cabecera, un email con todos sus registros de entradas y salidas.
 ```url
@@ -218,7 +218,7 @@ Envia al correo del usuario indicado en la cabecera, un email con todos sus regi
 
 Estos endpoints son para subir y ver la foto de cada usuario (Mas adelante se va a implementar los metodos PUT y DELETE).
 
-GET:
+**GET**:
 
 Muestra la foto del usuario indicado.
 ```url
@@ -234,7 +234,7 @@ Ejemplo:
 }
 ```
 
-POST:
+**POST**:
 
 Guarda la foto del usuario indicado en los parametros.
 
