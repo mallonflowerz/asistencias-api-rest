@@ -46,12 +46,12 @@ password: String
 
 PUT:
 ```url
-/register/{id}
+/register/id
 ``` 
 Actualiza el admin con el ID de la cabecera, debe ser enviada las nuevas credenciales en el body como en la petición POST.
 
 DELETE:
 ```url
-/register/{id}
+/register/id
 ``` 
 Elimina el admin con el ID dado en la cabecera.
