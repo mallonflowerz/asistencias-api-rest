@@ -56,7 +56,8 @@ POST:
 Es para registrar un nuevo administrador desde el body.
 ```url
 /register
-``` 
+```
+Ejemplo:
 ```json
 {
     "username": "String",
