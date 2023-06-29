@@ -113,6 +113,13 @@ Ejemplo:
 ]
 ```
 
+GET:
+
+Obtiene un usuario por su ID
+```url
+/usuarios/id
+```
+
 POST:
 
 Guarda un usuario en la BBDD (todos los campos son requeridos).
@@ -131,14 +138,9 @@ Ejemplo:
 }
 ```
 
-GET:
+PUT:
 
-Obtiene un usuario por su ID
+Actualiza el usuario con el id indicado en la url (Debe mandar el usuario con el mismo formato de la peticion POST).
 ```url
 /usuarios/id
-```
-
-PUT:
-```url
-/usuarios
 ```
