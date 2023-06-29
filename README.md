@@ -4,6 +4,10 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 
 ## Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
+- Si desea generar un JAR del proyecto puede mirar este video para hacerlo:
+
+https://www.youtube.com/watch?v=aHhdZIvnc7o&ab_channel=HAH-Tech
+
 - Puede cambiar la configuración de puertos de ejecución y demás en el archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) (debe tener un editor de código instalado para usar el código fuente).
 ```properties
 server.port=3004 # Puede cambiar el puerto al que desee
