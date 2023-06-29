@@ -158,11 +158,12 @@ Elimina el usuario con el id indicado en la url.
 Los siguientes endpoints son para registrar las entradas y salidas de cada usuario.
 
 GET:
+
 Obtiene todos los movimientos.
 ```url
 /asistencia
 ```
-Ejemplo
+Ejemplo:
 ```json
 [
     {
@@ -190,4 +191,25 @@ Ejemplo
         "entrada": false
     }
 ]
+```
+
+GET:
+
+Muestra los movimientos del usuario con el id indicado en la url.
+```url
+/asistencia/id
+```
+
+POST:
+
+Registra una salida o entrada dependiendo de su ultimo registro en la BBDD, debe colocar el numero de identifiacion en la url.
+```url
+/asistencia/numeroDeIdentificacion
+```
+
+POST:
+
+Envia al correo del usuario indicado en la cabecera, un email con todos sus registros de entradas y salidas.
+```url
+/asistencia/envmail/idUser
 ```
