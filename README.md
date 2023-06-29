@@ -57,8 +57,12 @@ POST:
 /register
 ``` 
 Es para registrar un nuevo administrador, debe ser enviado en el siguiente formato (clave: valor) desde el body:
-username : String
-password: String
+```json
+{
+    "username": "String",
+    "password": "String"
+}
+```
 
 PUT:
 ```url
