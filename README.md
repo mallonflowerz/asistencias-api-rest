@@ -73,3 +73,45 @@ DELETE:
 /register/id
 ``` 
 Elimina el admin con el ID dado en la cabecera.
+
+## USUARIO:
+
+Los siguientes endpoints sin para insertar, actualizar, eliminar y leer usuarios.
+
+GET:
+```url
+/usuarios
+```
+Obtiene todos los usuarios registrados en la BBDD. Ejemplo:
+```json
+[
+    {
+        "id": 1,
+        "primerNombre": "WILLIAN",
+        "segundoNombre": "JESE",
+        "primerApellido": "ASPRILLA",
+        "segundoApellido": "COOKIE",
+        "email": "correo1@gmail.com",
+        "numeroIdentificacion": "2205459632"
+    },
+    {
+        "id": 2,
+        "primerNombre": "JENIFER",
+        "segundoNombre": "CAMILA",
+        "primerApellido": "OESTE",
+        "segundoApellido": "SUR",
+        "email": "correo2@gmail.com",
+        "numeroIdentificacion": "2569965238"
+    },
+    {
+        "id": 3,
+        "primerNombre": "D",
+        "segundoNombre": "J",
+        "primerApellido": "DE",
+        "segundoApellido": "JESUS",
+        "email": "correo3@gmail.com",
+        "numeroIdentificacion": "123456"
+    },
+    ...
+]
+```
