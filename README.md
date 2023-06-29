@@ -1,7 +1,5 @@
 # API asistencias 
 
-![portada](https://raw.githubusercontent.com/mallonflowerz/asistencias/main/asset/portada.png)
-
 Esta API está hecha con Spring Boot y se encarga de manejar las entradas y salidas de usuarios, almacenar esos datos en la base de datos y enviar correos al usuario sobre sus salidas y entradas.
 
 ## Aspectos a tener en cuenta para ejecutar la API
