@@ -4,7 +4,7 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 
 ## Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
-- Puede cambiar la configuración de puertos de ejecución y demás en el archivo **application.properties** (debe tener un editor de código instalado para usar el código fuente).
+- Puede cambiar la configuración de puertos de ejecución y demás en el archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) (debe tener un editor de código instalado para usar el código fuente).
 ```properties
 server.port=3004 # Puede cambiar el puerto al que desee
 
@@ -223,7 +223,7 @@ Envia al correo del usuario indicado en la cabecera, un email con todos sus regi
 /asistencia/envmail/idUser
 ```
 
-Para poder usar el envio de correos electronicos debe configurar en el archivo **application.properties** lo siguiente:
+Para poder usar el envio de correos electronicos debe configurar en el archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) lo siguiente:
 ```properties
 # configuracion para envios de emails
 spring.mail.host=smtp.gmail.com
@@ -267,7 +267,7 @@ La forma de consumir esta peticion varia dependiendo del lenguaje o framework fr
 
 La primera y segunda key es obligatoria y deben escribirse exactamente como se indica en a imagen, en el **userId** debe indicar el id del usuario al cual desea subir su foto.
 
-Para configurar el peso de las foto puede irse al archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) **application.properties** y configurar lo siguiente:
+Para configurar el peso de las foto puede irse al archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) y configurar lo siguiente:
 ```properties
 # files config
 spring.servlet.multipart.max-file-size=5MB # indique el tamaño maximo que desee
