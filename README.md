@@ -144,3 +144,10 @@ Actualiza el usuario con el id indicado en la url (Debe mandar el usuario con el
 ```url
 /usuarios/id
 ```
+
+DELETE:
+
+Elimina el usuario con el id indicado en la url.
+```url
+/usuarios/id
+``` 
