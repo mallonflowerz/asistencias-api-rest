@@ -23,7 +23,6 @@ Por defecto se crea un admin con lo siguiente:
 
 Debe logearse para poder crear más administradores, si desea puede eliminar el admin por defecto.
 
-
 Base endpoint por defecto: 
 ```url
 http/localhost:3004
@@ -32,8 +31,10 @@ http/localhost:3004
 # Endpoints
 
 GET: 
-/register 
-Sirve para obtener todos los administradores que hay registrados.
+```url
+/register
+``` 
+Funciona para obtener todos los administradores que hay registrados.
 
 POST:
 /register
