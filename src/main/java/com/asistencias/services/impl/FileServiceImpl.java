@@ -50,13 +50,48 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public List<FileData> getByUser(UsuarioDTO usuarioDTO) {
-        Optional<List<FileData>> files = fileRepository
-                .findAllByUsuario(UsuarioMapper.toEntity(usuarioDTO));
+    public FileData getByUser(UsuarioDTO usuarioDTO) {
+        Optional<FileData> files = fileRepository
+                .findByUsuario(UsuarioMapper.toEntity(usuarioDTO));
         if (files.isPresent()) {
             return files.get();
         }
         return null;
+    }
+
+    @Override
+    public FileData update(Long userId, MultipartFile file) throws Exception {
+        Optional<Usuario> uO = uRepository.findById(userId);
+        if (uO == null) {
+            throw new Exception("Usuario no encontrado");
+        }
+        Optional<FileData> files = fileRepository
+                .findByUsuario(uO.get());
+        if (files.isPresent()) {
+            FileData fileData = new FileData();
+            fileData.setId(files.get().getId());
+            fileData.setFileName(file.getOriginalFilename());
+            fileData.setFileType(file.getContentType());
+            fileData.setFileData(file.getBytes());
+            fileData.setUsuario(uO.get());
+            return fileRepository.save(fileData);
+        }
+        return null;
+    }
+
+    @Override
+    public boolean delete(Long userId) throws Exception {
+        Optional<Usuario> uO = uRepository.findById(userId);
+        if (uO == null) {
+            throw new Exception("Usuario no encontrado");
+        }
+        Optional<FileData> file = fileRepository
+                .findByUsuario(uO.get());
+        if (file.isPresent()){
+            fileRepository.delete(file.get());
+            return true;
+        }
+        return false;
     }
 
 }
