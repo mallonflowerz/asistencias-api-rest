@@ -14,6 +14,7 @@ public class UsuarioDTO {
 
     private Long id;
 
+    @JsonIgnore
     private FileData foto;
 
     @NotBlank(message = "El primer nombre no puede estar vacio")

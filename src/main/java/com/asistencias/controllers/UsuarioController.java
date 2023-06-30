@@ -29,6 +29,7 @@ public class UsuarioController {
 
     private final UsuarioService uService;
 
+
     @GetMapping
     public ResponseEntity<List<UsuarioDTO>> mostrarUsuarios() {
         return ResponseEntity.ok().body(uService.obtenerUsers());
