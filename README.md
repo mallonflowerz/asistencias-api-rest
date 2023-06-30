@@ -279,12 +279,13 @@ spring.servlet.multipart.max-request-size=5MB # lo mismo aqui
 ```
 
 **PUT:**
-```url
-/files
-```
+
 Actualizar la foto de un usuario indicado en los parametros.
 
 Debe ser enviado de la misma forma que la peticion POST, debe indicar el **userId** del usuario a actualizar.
+```url
+/files
+```
 
 **DELETE:**
 
