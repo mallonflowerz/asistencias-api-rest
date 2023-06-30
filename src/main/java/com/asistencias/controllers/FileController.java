@@ -3,6 +3,7 @@ package com.asistencias.controllers;
 import java.util.Arrays;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,12 +59,13 @@ public class FileController {
             return ResponseEntity.badRequest().body(new Response("No se proporcionó una foto válida"));
     }
 
+    @DeleteMapping("/{userId}")
     public ResponseEntity<Response> deleteFile(@PathVariable Long userId) throws Exception {
         boolean eliminado = fileService.delete(userId);
         if (eliminado){
             return ResponseEntity.ok().body(new Response("Se elimino correctamente el archivo"));
         }
-        return ResponseEntity.badRequest().body(new Response("Ha ocurrido un error, recuerdo proporcionar datos validos"));
+        return ResponseEntity.badRequest().body(new Response("Ha ocurrido un error, recuerde proporcionar datos validos"));
     }
 
     private boolean isImageFile(MultipartFile file) {

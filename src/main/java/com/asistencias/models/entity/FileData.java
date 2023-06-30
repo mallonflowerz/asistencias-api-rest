@@ -22,7 +22,7 @@ public class FileData {
     @Column(columnDefinition = "BLOB")
     private byte[] fileData;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;

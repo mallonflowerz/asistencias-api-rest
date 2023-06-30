@@ -43,7 +43,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public FileData load(Long userId) throws Exception {
         Optional<Usuario> uO = uRepository.findById(userId);
-        if (uO == null) {
+        if (!uO.isPresent()) {
             throw new Exception("Usuario no encontrado");
         }
         return fileRepository.findByUsuarioId(uO.get().getId());
@@ -62,7 +62,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public FileData update(Long userId, MultipartFile file) throws Exception {
         Optional<Usuario> uO = uRepository.findById(userId);
-        if (uO == null) {
+        if (!uO.isPresent()) {
             throw new Exception("Usuario no encontrado");
         }
         Optional<FileData> files = fileRepository
@@ -82,7 +82,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public boolean delete(Long userId) throws Exception {
         Optional<Usuario> uO = uRepository.findById(userId);
-        if (uO == null) {
+        if (!uO.isPresent()) {
             throw new Exception("Usuario no encontrado");
         }
         Optional<FileData> file = fileRepository
