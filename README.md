@@ -5,7 +5,7 @@ Esta API está hecha con Spring Boot y se encarga de manejar las entradas y sali
 ## Aspectos a tener en cuenta para ejecutar la API
 - Debe tener Java JDK +17 instalado en su máquina.
 - Si desea generar un JAR del proyecto puede mirar este video para hacerlo: https://www.youtube.com/watch?v=aHhdZIvnc7o&ab_channel=HAH-Tech
-- **IMPORTANTE:** Para poder acceder a la API desde su Frontend debe poner su URL (origen) en el metodo [Origin](https://github.com/mallonflowerz/asistencias/blob/main/src/main/java/com/asistencias/variables/Origin.java) 
+- **IMPORTANTE:** Para poder acceder a la API desde su Frontend debe cambiar el valor y poner su URL en la variable **asistencias.url** en el [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties)
 - Puede cambiar la configuración de puertos de ejecución y demás en el archivo [application.properties](https://github.com/mallonflowerz/asistencias/blob/main/src/main/resources/application.properties) (debe tener un editor de código instalado para usar el código fuente).
 ```properties
 server.port=3004 # Puede cambiar el puerto al que desee
