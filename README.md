@@ -239,9 +239,9 @@ Si no sabe como generar una contraseña para la aplicacion puede mirar este vide
 
 https://www.youtube.com/watch?v=Q74nxFBCHCI&ab_channel=Consultor%C3%ADaINSICON
 
-## UPLOAD PHOTO (beta):
+## UPLOAD PHOTO:
 
-Estos endpoints son para subir y ver la foto de cada usuario (Mas adelante se va a implementar los metodos PUT y DELETE).
+Estos endpoints son para subir, ver, actualizar y eliminar la foto de cada usuario.
 
 **GET**:
 
@@ -262,7 +262,9 @@ Ejemplo:
 **POST**:
 
 Guarda la foto del usuario indicado en los parametros.
-
+```url
+/files
+```
 La forma de consumir esta peticion varia dependiendo del lenguaje o framework front-end que quiera usar, pero casi todos tienen la misma logica y es la siguiente.
 
 ![params](https://raw.githubusercontent.com/mallonflowerz/asistencias/main/asset/param.PNG)
@@ -275,3 +277,20 @@ Para configurar el peso de las foto puede irse al archivo [application.propertie
 spring.servlet.multipart.max-file-size=5MB # indique el tamaño maximo que desee
 spring.servlet.multipart.max-request-size=5MB # lo mismo aqui
 ```
+
+**PUT:**
+
+Actualizar la foto de un usuario indicado en los parametros.
+
+Debe ser enviado de la misma forma que la peticion POST, debe indicar el **userId** del usuario a actualizar.
+```url
+/files
+```
+
+**DELETE:**
+
+Elimina la foto del usuario por medio del id indicado en la url.
+```url
+/files/idUser
+```
+
