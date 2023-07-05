@@ -26,11 +26,12 @@ public class FileServiceImpl implements FileService {
     public boolean save(MultipartFile file, Long userID) throws Exception {
         Optional<Usuario> uO = uRepository.findById(userID);
         if (uO.isPresent()) {
-            FileData fileData = new FileData();
-            fileData.setFileName(file.getOriginalFilename());
-            fileData.setFileType(file.getContentType());
-            fileData.setFileData(file.getBytes());
-            fileData.setUsuario(uO.get());
+            FileData fileData = FileData.builder()
+                    .fileName(file.getOriginalFilename())
+                    .fileType(file.getContentType())
+                    .fileData(file.getBytes())
+                    .usuario(uO.get())
+                    .build();
             fileRepository.save(fileData);
             uO.get().setFoto(fileData);
             uRepository.save(uO.get());
@@ -67,12 +68,12 @@ public class FileServiceImpl implements FileService {
         Optional<FileData> files = fileRepository
                 .findByUsuario(uO.get());
         if (files.isPresent()) {
-            FileData fileData = new FileData();
-            fileData.setId(files.get().getId());
-            fileData.setFileName(file.getOriginalFilename());
-            fileData.setFileType(file.getContentType());
-            fileData.setFileData(file.getBytes());
-            fileData.setUsuario(uO.get());
+            FileData fileData = FileData.builder()
+                    .fileName(file.getOriginalFilename())
+                    .fileType(file.getContentType())
+                    .fileData(file.getBytes())
+                    .usuario(uO.get())
+                    .build();
             return fileRepository.save(fileData);
         }
         return null;
@@ -86,7 +87,7 @@ public class FileServiceImpl implements FileService {
         }
         Optional<FileData> file = fileRepository
                 .findByUsuario(uO.get());
-        if (file.isPresent()){
+        if (file.isPresent()) {
             fileRepository.delete(file.get());
             return true;
         }
