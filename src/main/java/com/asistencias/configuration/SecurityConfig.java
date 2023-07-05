@@ -2,6 +2,7 @@ package com.asistencias.configuration;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -22,15 +23,15 @@ import org.springframework.web.filter.CorsFilter;
 
 import com.asistencias.configuration.filters.JwtAuthenticationFilter;
 import com.asistencias.configuration.filters.JwtValidationFilter;
-import com.asistencias.variables.Origin;
 
-import lombok.AllArgsConstructor;
-
-@AllArgsConstructor
 @Configuration
 public class SecurityConfig {
 
-    private final AuthenticationConfiguration authConfig;
+    @Value("${asistencias.url}")
+    private String url;
+
+    @Autowired
+    private AuthenticationConfiguration authConfig;
 
     @Bean
     PasswordEncoder passwordEncoder() {
@@ -69,7 +70,7 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfig() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList(Origin.origen()));
+        config.setAllowedOrigins(Arrays.asList(url));
         config.setAllowedOriginPatterns(Arrays.asList("*"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
         config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
