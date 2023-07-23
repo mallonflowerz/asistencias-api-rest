@@ -20,7 +20,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 ## CREDENCIALES:
-Estos Endpoints son para crear admins para que manejen las diferentes peticiones HTTPs de la app.
+Estos Endpoints son para crear admins para que manejen las diferentes peticiones HTTP de la app.
 Por defecto se crea un admin con lo siguiente:
 
 ```json
